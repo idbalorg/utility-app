@@ -57,3 +57,62 @@ You will create a small React application based on the requirements provided bel
 
 ---
 
+## Instructions
+
+1. **Access the Repository:**
+   - You have been granted access to this repository for the duration of the assessment.
+
+2. **Clone the Repository:**
+   ```bash
+   git clone <repository-url>
+   cd frontend-react-assessment
+   ```
+
+3. **Switch to your work Branch:**
+  
+
+4. **Implement the Features:**
+   - Follow the requirements outlined above.
+   - Commit your changes with clear and concise messages:
+     ```bash
+     git commit -m "Added ... functionality to the ..."
+     ```
+
+5. **Push Your Branch:**
+   ```bash
+   git push origin firstname-lastname-assessment
+   ```
+
+6. **Optional - Create a Pull Request (PR):**
+   - If instructed, open a pull request from your branch to the `submit` branch.
+   - Add a description summarizing your work, or stating extra information for the review committee 
+
+---
+
+## Evaluation Criteria
+
+Your submission will be evaluated on the following:
+- **Code Quality:** Readability, organization, and adherence to best practices.
+- **Functionality:** Completeness of features and bug-free implementation.
+- **UI/UX:** Visual appeal and user experience.
+- **Git Usage:** Proper use of branches, commits, and pull requests.
+- **Error Handling:** Graceful handling of API errors and edge cases.
+- **Timeliness:** Timeliness is key, even if you are not able to finish it up.
+
+---
+
+## Additional Notes
+
+- You can use any external libraries that you find helpful, but be free to explain your choices.
+- Ensure your application runs without errors before submitting, its ok if it doesnt though 🤪🤪.
+- If you have any questions, feel free to reach out to the Head of the Technical Assessment committee `enochoyerinde(at)send24(dot)co` .
+
+---
+
+## Submission Deadline
+
+All branches must be pushed 2Hhrs 30Min upon recieving the assessment email.
+
+---
+
+We look forward to reviewing your work! Good luck!
