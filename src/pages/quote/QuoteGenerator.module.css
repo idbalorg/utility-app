@@ -1,4 +1,3 @@
-/* General Container */
 .container {
   min-height: 100vh;
   background-color: #f9f9f9;
@@ -8,7 +7,6 @@
   padding: 2rem;
 }
 
-/* Title */
 .title {
   font-size: 2rem;
   font-weight: bold;
@@ -16,7 +14,6 @@
   margin-bottom: 1rem;
 }
 
-/* Search Box */
 .searchBox {
   display: flex;
   gap: 0.5rem;
@@ -24,7 +21,6 @@
   align-items: center;
 }
 
-/* Search Input */
 .searchInput {
   padding: 0.75rem;
   border: 2px solid #ccc;
@@ -33,7 +29,6 @@
   width: 250px;
 }
 
-/* Search Button */
 .searchButton {
   background-color: #333333;
   color: white;
@@ -45,7 +40,9 @@
 }
 
 .searchButton:hover {
-  background-color: #0056b3;
+  background-color: #fff;
+  color: #333333;
+  border: 1px solid #333333;
 }
 
 /* Loading & Error Messages */
@@ -59,7 +56,6 @@
   color: red;
 }
 
-/* News Grid */
 .newsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -68,7 +64,6 @@
   max-width: 1000px;
 }
 
-/* News Card */
 .newsCard {
   background-color: white;
   padding: 1rem;
@@ -81,13 +76,11 @@
   transform: scale(1.02);
 }
 
-/* News Image */
 .newsImage {
   width: 100%;
   border-radius: 5px;
 }
 
-/* News Title */
 .newsTitle {
   font-size: 1.2rem;
   font-weight: bold;
@@ -95,14 +88,12 @@
   color: #333;
 }
 
-/* News Description */
 .newsDescription {
   font-size: 1rem;
   color: #666;
   margin-top: 0.5rem;
 }
 
-/* News Link */
 .newsLink {
   display: inline-block;
   margin-top: 0.5rem;
@@ -115,11 +106,11 @@
   text-decoration: underline;
 }
 
-/* No News Message */
 .noNews {
   font-size: 1.2rem;
   color: #666;
   margin-top: 1rem;
+  text-align: center;
 }
 
 /* Screen Reader Only (For Accessibility) */

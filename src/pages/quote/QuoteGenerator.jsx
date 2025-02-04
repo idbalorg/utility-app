@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "./QuoteGenerator.module.css";
 
@@ -10,15 +10,14 @@ function QuoteGenerator() {
 
   const API_KEY = "8f34551d6ab94ad8b7829883c5967a80";
 
-  const fetchNews = async (e) => {
-    e.preventDefault();
-    if (!query.trim()) return;
+  // Function to fetch news
+  const fetchNews = async (searchQuery = "Nigeria") => {
     setLoading(true);
     setError(null);
 
     try {
       const response = await axios.get(
-        `https://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`
+        `https://newsapi.org/v2/everything?q=${searchQuery}&apiKey=${API_KEY}`
       );
       setNewsEvents(response.data.articles || []);
     } catch (err) {
@@ -28,12 +27,23 @@ function QuoteGenerator() {
     }
   };
 
+  // Fetch Nigeria news on mount
+  useEffect(() => {
+    fetchNews();
+  }, []);
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>News Explorer</h1>
 
       {/* Search Bar with Accessible Label */}
-      <form onSubmit={fetchNews} className={styles.searchBox}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          if (query.trim()) fetchNews(query);
+        }}
+        className={styles.searchBox}
+      >
         <label htmlFor="news-search" className={styles.srOnly}>
           Search for news
         </label>
@@ -58,14 +68,14 @@ function QuoteGenerator() {
         </button>
       </form>
 
-      {/* Loading State with role="status" */}
+      {/* Loading State */}
       {loading && (
         <p className={styles.loading} role="status">
           Loading...
         </p>
       )}
 
-      {/* Error Message with role="alert" */}
+      {/* Error Message */}
       {error && (
         <p className={styles.error} role="alert">
           {error}
