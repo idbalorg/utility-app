@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       { index: true, path: "counter", element: <Counter /> },
-      { path: "quote-generator", element: <QuoteGenerator /> },
+      { path: "news-explorer", element: <QuoteGenerator /> },
     ],
   },
 ]);

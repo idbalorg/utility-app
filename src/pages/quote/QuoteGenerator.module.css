@@ -1,34 +1,135 @@
-.quoteContainer {
-  text-align: center;
-  margin-top: 50px;
-  padding: 20px;
-  background-color: #f4f4f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* General Container */
+.container {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
 }
 
-.quote {
-  font-size: 1.5rem;
-  font-style: italic;
+/* Title */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
-.author {
-  font-size: 1.2rem;
-  color: #777;
+/* Search Box */
+.searchBox {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  align-items: center;
 }
 
-.button {
-  padding: 10px 20px;
-  background-color: #007bff;
+/* Search Input */
+.searchInput {
+  padding: 0.75rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 250px;
+}
+
+/* Search Button */
+.searchButton {
+  background-color: #333333;
   color: white;
+  padding: 0.75rem 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
 }
 
-.button:hover {
+.searchButton:hover {
   background-color: #0056b3;
+}
+
+/* Loading & Error Messages */
+.loading,
+.error {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.error {
+  color: red;
+}
+
+/* News Grid */
+.newsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* News Card */
+.newsCard {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.newsCard:hover {
+  transform: scale(1.02);
+}
+
+/* News Image */
+.newsImage {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* News Title */
+.newsTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: #333;
+}
+
+/* News Description */
+.newsDescription {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* News Link */
+.newsLink {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.newsLink:hover {
+  text-decoration: underline;
+}
+
+/* No News Message */
+.noNews {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+/* Screen Reader Only (For Accessibility) */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }

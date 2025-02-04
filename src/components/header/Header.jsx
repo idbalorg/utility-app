@@ -12,8 +12,8 @@ function Header() {
           </Link>
         </li>
         <li className={styles.li}>
-          <Link to="/app/quote-generator" className={styles.link}>
-            Quote
+          <Link to="/app/news-explorer" className={styles.link}>
+            News
           </Link>
         </li>
       </ul>
