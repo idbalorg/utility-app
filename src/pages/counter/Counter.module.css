@@ -20,7 +20,7 @@
   padding: 10px 20px;
   font-size: 1rem;
   cursor: pointer;
-  background-color: #007bff;
+  background-color: #333333;
   color: white;
   border: none;
   border-radius: 5px;
@@ -28,7 +28,10 @@
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background-color: #ffffff;
+  color: #333333;
+  transition: background-color 0.3s;
+  border: 1px solid #333333;
 }
 
 .inputContainer {
@@ -40,4 +43,5 @@
   font-size: 1rem;
   width: 60px;
   text-align: center;
+  margin-right: 20px;
 }

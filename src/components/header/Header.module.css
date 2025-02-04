@@ -1,6 +1,9 @@
 .nav {
   background-color: #333;
   padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .ul {
@@ -16,21 +19,41 @@
   display: inline-block;
 }
 
+.logoContainer {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: 50px; /* Adjust size as needed */
+  width: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* new styles */
 .link {
-  color: white;
   text-decoration: none;
+  color: #fff;
   font-size: 1.2rem;
-  padding: 5px 10px;
+  padding: 0.5rem 1rem;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
 }
 
 .link:hover {
-  background-color: #007bff;
-  color: white;
+  color: #ff7f50;
 }
 
-.link:active {
-  background-color: #0056b3;
+/* Active link styling */
+.active {
+  color: #ff7f50;
+  border-bottom: 3px solid #ff7f50;
+  font-weight: bold;
 }

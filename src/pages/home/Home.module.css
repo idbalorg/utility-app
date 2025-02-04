@@ -1,47 +1,87 @@
-/* Home.module.css */
+/* General Container */
 .homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 50px;
-  background-color: #f4f4f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: #ffffff;
+  padding: 1rem;
 }
 
 h1 {
   font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 20px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .description {
   font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 30px;
+  max-width: 600px;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin-bottom: 2rem;
 }
 
 .imageContainer {
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .image {
-  width: 100%;
-  max-width: 400px;
+  max-width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
 }
 
 .enterAppLink {
   display: inline-block;
-  padding: 15px 30px;
-  background-color: #007bff;
-  color: white;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: #ff7f50;
+  border-radius: 8px;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: background-color 0.3s;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .enterAppLink:hover {
-  background-color: #0056b3;
+  background: #ff5722;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .imageContainer {
+    width: 150px;
+    height: 150px;
+  }
+
+  .enterAppLink {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
 }

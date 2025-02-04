@@ -1,20 +1,38 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import styles from "./Header.module.css";
 
 function Header() {
   return (
     <nav className={styles.nav}>
+      <Link to="/" className={styles.logoContainer}>
+        <img
+          src="/dilivva-logo.png"
+          alt="Dilivva Logo"
+          className={styles.logo}
+        />
+      </Link>
+
       <ul className={styles.ul}>
         <li className={styles.li}>
-          <Link to="/app/counter" className={styles.link}>
+          <NavLink
+            to="/app/counter"
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
+          >
             Counter
-          </Link>
+          </NavLink>
         </li>
         <li className={styles.li}>
-          <Link to="/app/news-explorer" className={styles.link}>
+          <NavLink
+            to="/app/news-explorer"
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
+          >
             News
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>

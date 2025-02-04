@@ -25,6 +25,12 @@ const Counter = () => {
             onChange={(e) => setIncrementBy(Number(e.target.value))}
           />
         </label>
+        <button
+          className={styles.button}
+          onClick={() => dispatch({ type: RESET })}
+        >
+          Reset
+        </button>
       </div>
 
       <div className={styles.buttons}>
@@ -39,12 +45,6 @@ const Counter = () => {
           onClick={() => dispatch({ type: DECREMENT, payload: incrementBy })}
         >
           Decrement by {incrementBy}
-        </button>
-        <button
-          className={styles.button}
-          onClick={() => dispatch({ type: RESET })}
-        >
-          Reset
         </button>
       </div>
     </div>
