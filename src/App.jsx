@@ -1,3 +1,5 @@
+import React from "react";
+
 import Home from "./pages/home/Home";
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
